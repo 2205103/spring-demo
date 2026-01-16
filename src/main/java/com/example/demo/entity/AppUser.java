@@ -19,8 +19,8 @@ public class AppUser {
     public AppUser() {}
     
     public AppUser(String name, String email) {
-        this.name = name;
-        this.email = email;
+        this.name = "Hi " + name;
+        this.email = "Here is your email: " + email;
     }
 
     public Long getId() {
