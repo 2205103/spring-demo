@@ -33,7 +33,7 @@ public class UserController {
                     .stream()
                     .map(user -> new AppUserDTO(
                             user.getId(),
-                        "Hi " + user.getName(),
+                        "Hi (Kire Marufff)" + user.getName(),
                         "Here is your email: " + user.getEmail()))
                   .toList();
     }
