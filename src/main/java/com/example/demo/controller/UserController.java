@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.AppUser;
 import com.example.demo.service.UserService;
+import com.example.demo.AppUserDTO;
 
 @RestController
 @RequestMapping("/users")
@@ -27,7 +28,14 @@ public class UserController {
     }
 
     @GetMapping
-    public List<AppUser> getAll() {
-        return service.getAllUsers();
+    public List<AppUserDTO> getAll() {
+        return service.getAllUsers()
+                    .stream()
+                    .map(user -> new AppUserDTO(
+                            user.getId(),
+                        "Hi " + user.getName(),
+                        "Here is your email: " + user.getEmail()))
+                  .toList();
     }
+
 }
