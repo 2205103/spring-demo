@@ -34,7 +34,7 @@ public class UserServiceController {
         return userService.getUserById(id);
     }
 
-    @PostMapping("/create/{name}/{id}")
+    @GetMapping("/create/{name}/{id}")
     public void createUser(@PathVariable String name, @PathVariable String id) {
         userService.createUser(name, id);
     }
