@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.service.User;
 import com.example.demo.service.UserService.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping("/service/user")
@@ -33,10 +32,5 @@ public class UserServiceController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable String id) {
         return userService.getUserById(id);
-    }
-
-    @GetMapping("/create/{name}/{id}")
-    public void createUser(@PathVariable String name, @PathVariable String id) {
-        userService.createUser(name, id);
     }
 }
