@@ -40,7 +40,7 @@ public class UserServiceController {
     }
 
     // ✅ Initialize with some data (optional)
-    @PostMapping("/initialize")
+    @GetMapping("/initialize")
     public String initializeData() {
         userService.createUser("Sami Sarwar", "2205103");
         userService.createUser("John Doe", "2205104");
