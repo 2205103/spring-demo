@@ -51,7 +51,6 @@ public class UserServiceController {
         userService.createUser("Sami Sarwar", "103");
         userService.createUser("Maruf Hasan Rahim", "104");
         userService.createUser("Fuad Shahriar", "164");
-        System.out.println("Initial users created.");
-        return "Initial data created!";
+        return "Initial data createdddddddddddddddddd!";
     }
 }
