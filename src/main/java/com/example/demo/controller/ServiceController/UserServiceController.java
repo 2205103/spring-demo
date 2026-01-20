@@ -48,9 +48,9 @@ public class UserServiceController {
     // ✅ Initialize with some data (optional)
     @GetMapping("/initialize")
     public String initializeData() {
-        userService.createUser("Sami Sarwar", "2205103");
-        userService.createUser("Maruf Hasan Rahim", "2205104");
-        userService.createUser("Fuad Shahriar", "2205164");
+        userService.createUser("Sami Sarwar", "103");
+        userService.createUser("Maruf Hasan Rahim", "104");
+        userService.createUser("Fuad Shahriar", "164");
         return "Initial data created!";
     }
 }
