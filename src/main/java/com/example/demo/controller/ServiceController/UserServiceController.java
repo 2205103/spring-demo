@@ -1,11 +1,17 @@
 package com.example.demo.controller.servicecontroller;  // ✅ Fixed package name
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import com.example.demo.service.User;
-import com.example.demo.service.UserService.UserService;  // ✅ Fixed import
-
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;  // ✅ Fixed import
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.service.User;
+import com.example.demo.service.UserService.UserService;
 
 @RestController
 @RequestMapping("/service/user")
@@ -43,8 +49,8 @@ public class UserServiceController {
     @GetMapping("/initialize")
     public String initializeData() {
         userService.createUser("Sami Sarwar", "2205103");
-        userService.createUser("John Doe", "2205104");
-        userService.createUser("Jane Smith", "2205105");
+        userService.createUser("Maruf Hasan Rahim", "2205104");
+        userService.createUser("Fuad Shahriar", "2205164");
         return "Initial data created!";
     }
 }
