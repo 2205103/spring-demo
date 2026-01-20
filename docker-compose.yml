@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   postgres-db:
     image: postgres:16
@@ -26,11 +28,13 @@ services:
       - "com.centurylinklabs.watchtower.enable=true"
 
   watchtower:
-    image: containrrr/watchtower
+    image: containrrr/watchtower:latest
     container_name: watchtower
     volumes:
+      # Windows Docker Engine pipe
       - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 30 --cleanup
+    restart: unless-stopped
     networks:
       - demo-net
 
